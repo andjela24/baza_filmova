@@ -54,13 +54,13 @@ class FilmKontroler
         $zanr_id = (int)$_POST['zanr_id'];
         var_dump($_POST);
 
-        $query = $this->pdo->prepare('UPDATE baza_filmova.film SET film.naslov = :naslov, film.godina = :godina, film.zanr_id = :zanr_id  WHERE film.film_id = :film_id');
+        $query = $this->pdo->prepare('UPDATE baza_filmova.film SET film.naslov = ?, film.godina = ?, film.zanr_id = ?  WHERE film.film_id = ?');
 
         //Povezujem parametre 
-        $query->bindParam(':naslov', $naslov);
-        $query->bindParam(':godina', $godina);
-        $query->bindParam(':zanr_id', $zanr_id);
-        $query->bindParam('film_id', $film_id);
+        $query->bindParam(1, $naslov);
+        $query->bindParam(2, $godina);
+        $query->bindParam(3, $zanr_id);
+        $query->bindParam(4, $film_id);
 
         $query->execute();
     }
