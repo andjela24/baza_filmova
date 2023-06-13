@@ -60,9 +60,10 @@ function validirajKorisnika($username, $password)
         <label for="password">Lozinka:</label>
         <input type="password" id="password" name="password" required><br><br>
 
-        <input type="submit" class="btn_prijava" value="Prijavi se">
-
+        <div class="button-group">
+        <p>Nemate nalog? </p><a class="btn_grey" href="forma_kreiranje_korisnika.php">Registrujte se</a>
+        <input type="submit" value="Prijavi se">
+        </div>
     </form>
-    <p>Nemate nalog? <a class="button" href="registracija.php">Registrujte se</a></p>
 </body>
 </html>

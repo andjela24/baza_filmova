@@ -16,12 +16,12 @@ $korisnici = $korisnikKontroler->vrati_sve_korisnike();
 <body>
     <h2>Prikaz korisnika</h2>
     <a class="btn_grey" href="filmovi.php">Filmovi</a>
-    <a class="btn_grey" href="zanrovi.php">Zanrovi</a>
+    <a class="btn_grey" href="zanrovi.php">Žanrovi</a>
     <table>
         <tr>
             <th>Username</th>
             <th>Ime</th>
-            <th>prezime</th>
+            <th>Prezime</th>
             <th>Izmeni</th>
             <th>Obriši</th>
         </tr>
@@ -31,7 +31,7 @@ $korisnici = $korisnikKontroler->vrati_sve_korisnike();
                 <td><?php echo $korisnik['ime']; ?></td>
                 <td><?php echo $korisnik['prezime']; ?></td>
                 <td><a class="button" href="forma_izmena_korisnika.php?korisnik_id=<?php echo $korisnik['korisnik_id']; ?>">Izmeni</a></td>
-                <td><a class="btn_red" href="obrisi_korisnika.php?korisnik_id=<?php echo $zanr['korisnik_id']; ?>">Obriši</a></td>
+                <td><a class="btn_red" href="obrisi_korisnika.php?korisnik_id=<?php echo $korisnik['korisnik_id']; ?>">Obriši</a></td>
             </tr>
         <?php } ?>
     </table>

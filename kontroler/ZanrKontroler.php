@@ -55,8 +55,8 @@ class ZanrKontroler{
     //Brisanje zanra
     public  function obrisi_zanr($zanr_id)
     {
-        $sql = "DELETE FROM baza_filmova.zanr WHERE zanr_id=?";
-        $stmt= $this->pdo->prepare($sql);
-        $stmt->execute([$zanr_id]);
+        $query = $this->pdo->prepare('DELETE FROM baza_filmova.zanr WHERE zanr.zanr_id = ?');
+        $query->bindParam(1, $zanr_id);
+        $query->execute();
     }
 }

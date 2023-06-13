@@ -15,7 +15,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/bioskop/kontroler/FilmKontroler.php';
         <input type="text" id="naziv" name="naziv" required><br><br>
         <div class="button-group">
         <a class="btn_grey" href="zanrovi.php">Nazad na sve žanrove</a>
-        <input type="submit" value="Kreiraj film">
+        <input type="submit" value="Kreiraj žanr">
         </div>
     </form>
 </body>

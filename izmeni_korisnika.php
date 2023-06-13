@@ -29,6 +29,21 @@ if (isset($_GET['korisnik_id'])) {
         echo "Korisnik nije pronađen.";
         exit;
     }
+    // Osnovna validacija podataka
+    if (strlen($password) < 8) {
+        echo "Lozinka mora imati najmanje 8 karaktera.";
+        return;
+    }
+
+    if (!ctype_upper(substr($ime, 0, 1))) {
+        echo "Ime mora početi velikim slovom.";
+        return;
+    }
+
+    if (!ctype_upper(substr($prezime, 0, 1))) {
+        echo "Prezime mora početi velikim slovom.";
+        return;
+    }
 } else {
     // Ako nije prosleđen korisnik_id
     echo "Nije prosleđen korisnik_id.";

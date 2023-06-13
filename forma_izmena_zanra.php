@@ -26,12 +26,12 @@ if (isset($_GET['zanr_id'])) {
 <html>
 
 <head>
-    <title>Izmena zanra</title>
+    <title>Izmena žanra</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
-    <h2>Izmena zanra</h2>
+    <h2>Izmena žanra</h2>
     <form method="post" action="izmeni_zanr.php">
         <input type="hidden" name="zanr_id" value="<?php echo $zanr_id; ?>">
 
@@ -39,8 +39,8 @@ if (isset($_GET['zanr_id'])) {
         <input type="text" id="naziv" name="naziv" value="<?php echo $naziv; ?>" required><br><br>
 
         <div class="button-group">
-        <a class="btn_grey" href="zanrovi.php">Nazad na sve zanrove</a>
-        <input type="submit" value="Izmeni zanr">
+        <a class="btn_grey" href="zanrovi.php">Nazad na sve žanrove</a>
+        <input type="submit" value="Izmeni žanr">
         </div>
     </form>
 </body>

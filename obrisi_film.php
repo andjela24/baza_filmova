@@ -15,7 +15,7 @@ if (isset($_GET['film_id'])) {
     header('Location: filmovi.php');
     exit();
 } else {
-    // Ako nije prosleđen film_id, možete obraditi tu situaciju ili prikazati poruku korisniku
+    // Ako nije prosleđen film_id
     echo "Nije prosleđen film_id.";
     exit();
 }

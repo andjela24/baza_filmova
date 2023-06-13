@@ -11,11 +11,11 @@ $zanrovi = $zanrKontroler->vrati_sve_zanrove();
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Prikaz zanrova</title>
+    <title>Prikaz žanrova</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <h2>Prikaz zanrova</h2>
+    <h2>Prikaz žanrova</h2>
     <a class="btn_grey" href="filmovi.php">Filmovi</a>
     <a class="btn_grey" href="korisnici.php">Korisnici</a>
     <table>
@@ -32,6 +32,6 @@ $zanrovi = $zanrKontroler->vrati_sve_zanrove();
             </tr>
         <?php } ?>
     </table>
-    <a class="btn_blue" href="forma_kreiranje_zanra.php">Kreiraj novi zanr</a>
+    <a class="btn_blue" href="forma_kreiranje_zanra.php">Kreiraj novi žanr</a>
 </body>
 </html>

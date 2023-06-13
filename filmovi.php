@@ -18,14 +18,14 @@ $zanrovi = $zanrKontroler->vrati_sve_zanrove();
 </head>
 <body>
     <h2>Prikaz filmova</h2>
-    <a class="btn_grey" href="zanrovi.php">Zanrovi</a>
+    <a class="btn_grey" href="zanrovi.php">Žanrovi</a>
     <a class="btn_grey" href="korisnici.php">Korisnici</a>
     <table>
         <tr>
             <th>Naslov</th>
             <th>Godina</th>
             <th>Dodato</th>
-            <th>Zanr</th>
+            <th>Žanr</th>
             <th>Izmeni</th>
             <th>Obriši</th>
         </tr>

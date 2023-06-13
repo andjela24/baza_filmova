@@ -19,7 +19,7 @@ class KorisnikKontroler{
         $query->bindParam(1, $username);
         $query->bindParam(2, $password);
         $query->bindParam(3, $ime);
-        $query->bindParam(3, $prezime);
+        $query->bindParam(4, $prezime);
 
         $query->execute();
     }
@@ -50,21 +50,21 @@ class KorisnikKontroler{
         $ime = $_POST['ime'];
         $prezime = $_POST['prezime'];
 
-        $query = $this->pdo->prepare('UPDATE biza_filmova.korisnik SET korisnik.username = ?, korisnik.password = ?, korisnik.ime = ?, korisnik.prezime = ? WHERE korisnik.korisnik_id = ?');
+        $query = $this->pdo->prepare('UPDATE baza_filmova.korisnik SET korisnik.username = ?, korisnik.password = ?, korisnik.ime = ?, korisnik.prezime = ? WHERE korisnik.korisnik_id = ?');
        
         //Povezujem parametre 
         $query->bindParam(1, $username);
         $query->bindParam(2, $password);
         $query->bindParam(3, $ime);
         $query->bindParam(4, $prezime);
-        $query->bindParam(4, $korisnik_id);
+        $query->bindParam(5, $korisnik_id);
         $query->execute();
     }
     //Brisanje filma
     public  function obrisi_korisnika($korisnik_id)
     {
-        $sql = "DELETE FROM baza_filmova.korisnik WHERE korisnik_id = ?";
-        $stmt= $this->pdo->prepare($sql);
-        $stmt->execute($stmt);
+        $query = $this->pdo->prepare('DELETE FROM baza_filmova.korisnik WHERE korisnik.korisnik_id = ?');
+        $query->bindParam(1, $korisnik_id);
+        $query->execute();
     }
 }

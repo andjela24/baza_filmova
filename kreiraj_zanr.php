@@ -1,5 +1,5 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT'].'/bioskop/kontroler/Zanrontroler.php';
+include $_SERVER['DOCUMENT_ROOT'].'/bioskop/kontroler/ZanrKontroler.php';
 
 // Provera da li je zahtev POST metoda
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

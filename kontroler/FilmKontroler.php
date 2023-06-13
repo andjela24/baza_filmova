@@ -67,7 +67,6 @@ class FilmKontroler
     //Brisanje filma
     public  function obrisi_film($film_id)
     {
-
         $query = $this->pdo->prepare('DELETE FROM baza_filmova.film WHERE film.film_id = ?');
         $query->bindParam(1, $film_id);
         $query->execute();
