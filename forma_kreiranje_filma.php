@@ -30,7 +30,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/bioskop/kontroler/FilmKontroler.php';
             ?>
         </select><br><br>
         <div class="button-group">
-        <a class="btn_grey" href="zanrovi.php">Nazad na sve zanrove</a>
+        <a class="btn_grey" href="filmovi.php">Nazad na sve filmove</a>
         <input type="submit" value="Kreiraj film">
         </div>
     </form>
