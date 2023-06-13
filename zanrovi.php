@@ -16,8 +16,8 @@ $zanrovi = $zanrKontroler->vrati_sve_zanrove();
 </head>
 <body>
     <h2>Prikaz zanrova</h2>
-    <a class="button" href="filmovi.php">Filmovi</a>
-    <a class="button" href="korsnici.php">Korisnici</a>
+    <a class="btn_grey" href="filmovi.php">Filmovi</a>
+    <a class="btn_grey" href="korisnici.php">Korisnici</a>
     <table>
         <tr>
             <th>Naziv</th>
@@ -28,10 +28,10 @@ $zanrovi = $zanrKontroler->vrati_sve_zanrove();
             <tr>
                 <td><?php echo $zanr['naziv']; ?></td>
                 <td><a class="button" href="forma_izmena_zanra.php?zanr_id=<?php echo $zanr['zanr_id']; ?>">Izmeni</a></td>
-                <td><a class="btn_crveno" href="obrisi_zanr.php?zanr_id=<?php echo $zanr['zanr_id']; ?>">Obriši</a></td>
+                <td><a class="btn_red" href="obrisi_zanr.php?zanr_id=<?php echo $zanr['zanr_id']; ?>">Obriši</a></td>
             </tr>
         <?php } ?>
     </table>
-    <a class="button" href="forma_kreiranje_zanra.php">Kreiraj novi zanr</a>
+    <a class="btn_blue" href="forma_kreiranje_zanra.php">Kreiraj novi zanr</a>
 </body>
 </html>

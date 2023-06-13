@@ -55,7 +55,10 @@ if (isset($_GET['film_id'])) {
             }
             ?>
         </select><br><br>
+        <div class="button-group">
+        <a class="btn_grey" href="filmovi.php">Nazad na sve filmove</a>
         <input type="submit" value="Izmeni film">
+        </div>
     </form>
 </body>
 

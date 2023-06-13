@@ -18,8 +18,8 @@ $zanrovi = $zanrKontroler->vrati_sve_zanrove();
 </head>
 <body>
     <h2>Prikaz filmova</h2>
-    <a class="button" href="zanrovi.php">Zanrovi</a>
-    <a class="button" href="korsnici.php">Korisnici</a>
+    <a class="btn_grey" href="zanrovi.php">Zanrovi</a>
+    <a class="btn_grey" href="korisnici.php">Korisnici</a>
     <table>
         <tr>
             <th>Naslov</th>
@@ -36,11 +36,11 @@ $zanrovi = $zanrKontroler->vrati_sve_zanrove();
                 <td><?php echo $film['dodato_at']; ?></td>
                 <td><?php echo pronadjiNazivZanra($film['zanr_id'], $zanrovi); ?></td>
                 <td><a class="button" href="forma_izmena_filma.php?film_id=<?php echo $film['film_id']; ?>">Izmeni</a></td>
-                <td><a class="btn_crveno" href="obrisi_film.php?film_id=<?php echo $film['film_id']; ?>">Obriši</a></td>
+                <td><a class="btn_red" href="obrisi_film.php?film_id=<?php echo $film['film_id']; ?>">Obriši</a></td>
             </tr>
         <?php } ?>
     </table>
-    <a class="button" href="forma_kreiranje_filma.php">Kreiraj novi film</a>
+    <a class="btn_blue" href="forma_kreiranje_filma.php">Kreiraj novi film</a>
 
     <?php
 // Pomoćna funkcija za pronalaženje naziva žanra na osnovu zanr_id
