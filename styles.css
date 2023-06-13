@@ -12,6 +12,7 @@ body {
   
   input[type="text"],
   input[type="number"],
+  input[type="password"],
   select {
     box-sizing: border-box;
     width: 100%;

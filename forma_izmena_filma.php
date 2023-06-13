@@ -15,12 +15,12 @@ if (isset($_GET['film_id'])) {
         $godina = $film->godina;
         $zanr_id = $film->zanr_id;
     } else {
-        // Ako film nije pronađen, možete obraditi tu situaciju ili prikazati poruku korisniku
+        // Ako film nije pronađen
         echo "Film nije pronađen.";
         exit;
     }
 } else {
-    // Ako nije prosleđen film_id, možete obraditi tu situaciju ili prikazati poruku korisniku
+    // Ako nije prosleđen film_id
     echo "Nije prosleđen film_id.";
     exit;
 }

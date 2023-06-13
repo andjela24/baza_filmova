@@ -51,7 +51,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <label for="prezime">Prezime:</label>
         <input type="text" id="prezime" name="prezime" required><br><br>
 
+        <div class="button-group">
+        <a class="btn_grey" href="index.php">Uloguj se</a>
         <input type="submit" value="Registriraj se">
+        </div>
     </form>
 </body>
 </html>

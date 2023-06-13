@@ -42,7 +42,7 @@ class KorisnikKontroler{
         return	$results = $query->fetchAll(PDO::FETCH_ASSOC);
     }
     //Azuriranje korisnika
-    public  function azuriraj_korisnika($korisnik_id)
+    public  function izmeni_korisnika($korisnik_id)
     {
         //Vraca podatke iz forme
         $username = $_POST['username'];
