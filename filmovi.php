@@ -18,6 +18,8 @@ $zanrovi = $zanrKontroler->vrati_sve_zanrove();
 </head>
 <body>
     <h2>Prikaz filmova</h2>
+    <a class="button" href="zanrovi.php">Zanrovi</a>
+    <a class="button" href="korsnici.php">Korisnici</a>
     <table>
         <tr>
             <th>Naslov</th>
