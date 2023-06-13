@@ -1,12 +1,13 @@
 <?php
 include $_SERVER['DOCUMENT_ROOT'].'/bioskop/kontroler/FilmKontroler.php';
-session_start();
-// Kreirajte instancu kontrolera filma
-$filmKontroler = new FilmKontroler();
+include $_SERVER['DOCUMENT_ROOT'].'/bioskop/kontroler/ZanrKontroler.php';
 
 // Dohvatite sve filmove
+$filmKontroler = new FilmKontroler();
 $filmovi = $filmKontroler->vrati_sve_filmove();
-
+// Dohvatite sve žanrove
+$zanrKontroler = new ZanrKontroler();
+$zanrovi = $zanrKontroler->vrati_sve_zanrove();
 ?>
 
 <!DOCTYPE html>
@@ -22,6 +23,7 @@ $filmovi = $filmKontroler->vrati_sve_filmove();
             <th>Naslov</th>
             <th>Godina</th>
             <th>Dodato</th>
+            <th>Zanr</th>
             <th>Izmeni</th>
             <th>Obriši</th>
         </tr>
@@ -30,11 +32,24 @@ $filmovi = $filmKontroler->vrati_sve_filmove();
                 <td><?php echo $film['naslov']; ?></td>
                 <td><?php echo $film['godina']; ?></td>
                 <td><?php echo $film['dodato_at']; ?></td>
-                <td><a class="button" href="edit_film.php?film_id=<?php echo $film['film_id']; ?>">Izmeni</a></td>
-                <td><a class="button" href="delete_film.php?film_id=<?php echo $film['film_id']; ?>">Obriši</a></td>
+                <td><?php echo pronadjiNazivZanra($film['zanr_id'], $zanrovi); ?></td>
+                <td><a class="button" href="forma_izmena_filma.php?film_id=<?php echo $film['film_id']; ?>">Izmeni</a></td>
+                <td><a class="btn_crveno" href="obrisi_film.php?film_id=<?php echo $film['film_id']; ?>">Obriši</a></td>
             </tr>
         <?php } ?>
     </table>
     <a class="button" href="forma_kreiranje_filma.php">Kreiraj novi film</a>
+
+    <?php
+// Pomoćna funkcija za pronalaženje naziva žanra na osnovu zanr_id
+function pronadjiNazivZanra($zanr_id, $zanrovi) {
+    foreach ($zanrovi as $zanr) {
+        if ($zanr['zanr_id'] == $zanr_id) {
+            return $zanr['naziv'];
+        }
+    }
+    return "";
+}
+?>
 </body>
 </html>

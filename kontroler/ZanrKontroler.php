@@ -37,7 +37,6 @@ class ZanrKontroler{
         $query->execute();
         //Vraca asociajtivni niz
         $results = $query->fetchAll(PDO::FETCH_ASSOC);
-        var_dump($results);
         return $results ;
     }
     //Azuriranje zanra
