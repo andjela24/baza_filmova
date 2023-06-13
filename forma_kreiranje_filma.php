@@ -17,8 +17,8 @@ include $_SERVER['DOCUMENT_ROOT'].'/bioskop/kontroler/FilmKontroler.php';
         <label for="godina">Godina:</label>
         <input type="number" id="godina" name="godina" required><br><br>
 
-        <label for="zanr">Žanr:</label>
-        <select id="zanr" name="zanr" required>
+        <label for="zanr_id">Žanr:</label>
+        <select id="zanr_id" name="zanr_id" required>
             <?php
 
             $zanrKontroler = new ZanrKontroler();
@@ -29,7 +29,10 @@ include $_SERVER['DOCUMENT_ROOT'].'/bioskop/kontroler/FilmKontroler.php';
             }
             ?>
         </select><br><br>
+        <div class="button-group">
+        <a class="btn_grey" href="zanrovi.php">Nazad na sve zanrove</a>
         <input type="submit" value="Kreiraj film">
+        </div>
     </form>
 </body>
 </html>

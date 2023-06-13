@@ -40,7 +40,7 @@ class ZanrKontroler{
         return $results ;
     }
     //Azuriranje zanra
-    public  function azuriraj_zanr($zanr_id)
+    public  function izmeni_zanr($zanr_id)
     {
         //Vraca podatke iz forme
         $naziv = $_POST['naziv'];

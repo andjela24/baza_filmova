@@ -1,15 +1,13 @@
 <?php
 include $_SERVER['DOCUMENT_ROOT'].'/bioskop/kontroler/FilmKontroler.php';
 
-// Provjerite da li je zahtjev POST metoda
+// Provera da li je zahtev POST metoda
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Kreirajte instancu vaše klase
+    // Kreiranje instance
     $filmKontroler = new FilmKontroler();
+    $filmKontroler->kreiraj_film($_POST['naslov'], $_POST['godina'], $_POST['zanr_id']);
 
-    // Pozovite odgovarajući metod
-    $filmKontroler->kreiraj_film($_POST['naslov'], $_POST['godina'], $_POST['zanr']);
-
-    // Preusmjerite korisnika na željenu stranicu nakon obrade forme
+    // Preusmeravanje korisnika na željenu stranicu nakon obrade forme
     header('Location: filmovi.php');
     exit();
 }
