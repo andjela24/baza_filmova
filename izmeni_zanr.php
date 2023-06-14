@@ -14,7 +14,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 // Provera da li je prosleđen zanr_id za izmenu
 if (isset($_GET['zanr_id'])) {
-    $zanr_id = $_GET['zanr_id'];
     $zanr = $zanrKontroler->vrati_zanr($zanr_id);
     
     // Provera da li je pronađen zanr

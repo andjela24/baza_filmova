@@ -44,7 +44,7 @@ class ZanrKontroler{
     {
         //Vraca podatke iz forme
         $naziv = $_POST['naziv'];
-
+        var_dump($naziv);
         $query = $this->pdo->prepare('UPDATE baza_filmova.zanr SET zanr.naziv = ? WHERE zanr.zanr_id = ?');
        
         //Povezujem parametre 
