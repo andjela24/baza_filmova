@@ -19,10 +19,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $prezime = $_POST['prezime'];
 
     // Osnovna validacija podataka
-    if (strlen($password) < 8) {
-        $passwordError = "Lozinka mora imati najmanje 8 karaktera.";
-    } elseif (!preg_match('/[a-z]/', $password) || !preg_match('/[A-Z]/', $password) || !preg_match('/[0-9]/', $password) || !preg_match('/[^a-zA-Z0-9]/', $password)) {
-        $passwordError = "Lozinka mora sadržati mala slova, velika slova, brojeve i specijalne karaktere.";
+    if ((strlen($password) < 8) || !preg_match('/[a-z]/', $password) || (!preg_match('/[A-Z]/', $password)) 
+    || (!preg_match('/[0-9]/', $password)) || (!preg_match('/[^a-zA-Z0-9]/', $password))){
+        $passwordError = "Lozinka mora imati najmanje 8 karaktera, mora sadržati mala slova, velika slova, brojeve i specijalne karaktere.";
     }
 
     if ($password !== $passwordRepeat) {

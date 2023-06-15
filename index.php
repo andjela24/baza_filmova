@@ -12,14 +12,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Provera korisničkog imena i lozinke
     if (validirajKorisnika($username, $password)) {
-        //Cuvanje sesije na osnovu username-a
-        //$_SESSION['username'] = $username;
         header('Location: filmovi.php');
 
     } else {
         // Pogrešno korisničko ime ili lozinka
         $poruka = "Pogrešno korisničko ime ili lozinka.";
-        //echo "Pogrešno korisničko ime ili lozinka.";
     }
 }
 

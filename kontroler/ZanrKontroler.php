@@ -35,6 +35,7 @@ class ZanrKontroler{
     public function vrati_sve_zanrove(){
         $query =$this->pdo->query('SELECT * FROM baza_filmova.zanr');
         $query->execute();
+        
         //Vraca asociajtivni niz
         $results = $query->fetchAll(PDO::FETCH_ASSOC);
         return $results ;
@@ -44,7 +45,7 @@ class ZanrKontroler{
     {
         //Vraca podatke iz forme
         $naziv = $_POST['naziv'];
-        var_dump($naziv);
+
         $query = $this->pdo->prepare('UPDATE baza_filmova.zanr SET zanr.naziv = ? WHERE zanr.zanr_id = ?');
        
         //Povezujem parametre 

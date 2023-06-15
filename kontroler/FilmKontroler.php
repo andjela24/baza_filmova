@@ -42,7 +42,7 @@ class FilmKontroler
         $query = $this->pdo->query("SELECT * FROM baza_filmova.film");
         $query->execute();
         //Vraca asocijativni niz filmova
-        return    $results = $query->fetchAll(PDO::FETCH_ASSOC);
+        return $results = $query->fetchAll(PDO::FETCH_ASSOC);
     }
     //Azuriranje filmova
     public  function izmeni_film($film_id)
@@ -52,8 +52,7 @@ class FilmKontroler
         $godina = $_POST['godina'];
         //kastovan na int zbog forme koja vraca string
         $zanr_id = (int)$_POST['zanr_id'];
-        var_dump($_POST);
-
+        
         $query = $this->pdo->prepare('UPDATE baza_filmova.film SET film.naslov = ?, film.godina = ?, film.zanr_id = ?  WHERE film.film_id = ?');
 
         //Povezujem parametre 

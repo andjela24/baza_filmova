@@ -25,12 +25,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $ponovljeni_password = $_POST['ponovljeni_password'];
 
             // Osnovna validacija podataka
-            if (strlen($password) < 8) {
-                $passwordError = "Lozinka mora imati najmanje 8 karaktera.";
-            }
-
-            else if (!preg_match('/[a-z]/', $password) || !preg_match('/[A-Z]/', $password) || !preg_match('/[0-9]/', $password) || !preg_match('/[^a-zA-Z0-9]/', $password)) {
-                $passwordError = "Lozinka mora sadržati mala i velika slova, broj i specijalni karakter.";
+            if ((strlen($password) < 8) || (!preg_match('/[a-z]/', $password)) || (!preg_match('/[A-Z]/', $password)) 
+            || (!preg_match('/[0-9]/', $password) || (!preg_match('/[^a-zA-Z0-9]/', $password)))) {
+                $passwordError = "Lozinka mora imati najmanje 8 karaktera, mora sadržati mala i velika slova, broj i specijalni karakter.";
             }
 
             if ($password !== $ponovljeni_password) {
